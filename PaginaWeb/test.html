@@ -1,0 +1,237 @@
+<script>
+    function trocarImagem(src,caminho) {
+      document.getElementById(src).src = caminho;
+    }
+  </script>
+
+<style>
+
+    .body2 *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: black;
+    }
+    
+    #container2{
+        margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+    #chair-side2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+    }
+    
+    #menu-side2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 600px;
+      height: 100%;
+      background-color: rgb(236, 236, 236);
+      position: relative;
+      overflow: auto;
+    }
+    
+    
+    .titulo-sub2 * {
+      margin:0
+    }
+    
+    .titulo-sub2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px;
+    }
+    
+    
+    .titulo2 {
+      font-size: 50px;
+    }
+    
+    .sub2 {
+      margin-top: 6px;
+      font-size: 18px;
+    }
+    
+    .color-options2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    
+    .cores2 {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 50px 0 50px
+    }
+    
+    .color-option {
+      height: 30px;
+      width: 30px;
+      margin: 5px 5px 5px 5px;
+      border-radius: 100px;
+    }
+    
+    
+    .color-option:hover {
+      margin: 4px 4px 4px 4px;
+      border: 1px solid black;
+    }
+    
+    .chair-image {
+      position: absolute;
+      top: 100;
+      width: 700px;
+    }
+    
+    .imagens2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* Adicionado */
+      width: 100%; /* Adicionado */
+    
+    }
+    
+    .titulo-option {
+      margin: 0 30px 0 30px
+    }
+    
+    
+</style>
+
+
+<div class="body2">
+    <div id="container2">
+      <div id="chair-side2">
+        <div class="imagens2">
+          <img class="chair-image" id="peca1" src="img/poltrona Marly_trnas.png" alt="Poltrona chair" />
+          <img class="chair-image" id="peca2" src="img/poltrona Marly_trnas2.png" alt="Poltrona chair" />
+          <img class="chair-image" id="peca3" src="img/poltrona Marly_trnas3.png" alt="Poltrona chair" />
+          <img class="chair-image" id="peca4" src="img/poltrona Marly_trnas4.png" alt="Poltrona chair" />
+          <img class="chair-image" id="peca5" src="img/poltrona Marly_trnas5.png" alt="Poltrona chair" />
+          <img class="chair-image" id="peca6" src="img/poltrona Marly_trnas6.png" alt="Poltrona chair" />
+          <img class="chair-image" id="logo" src="img/logo.png" alt="Poltrona chair" />
+          <img class="chair-image" id="almofada" src="img/almofada.png" alt="Poltrona chair" />
+        </div>
+      </div>
+      <div id="menu-side2">
+
+        <div class="titulo-sub2">
+          <h1 class="titulo2">Poltrona</h1>
+          <p class="sub2">Personalize sua poltrona</p>
+        </div>
+        
+        <div class="color-options2">
+          <h1 class="titulo-option" >Cor da base</h1>
+          <div class="cores2">
+            <div style="background-color: rgb(150, 150, 150);" onclick="trocarImagem('peca1','img/base-cinza.png')" class="color-option"></div>
+            <div style="background-color: rgb(0, 0, 0);" onclick="trocarImagem('peca1','img/base-preta.png')" class="color-option"></div>
+          </div>
+
+        </div>
+
+        <div class="color-options2">
+          <h1 class="titulo-option" >Cor da Parte Inferior</h1>
+          <div class="cores2">
+            <img src="./img/0040/0040.png" alt="" onclick="trocarImagem('peca2','img/0040/peca2.png')" class="color-option">
+            <img src="./img/0131/0131.png" alt="" onclick="trocarImagem('peca2','img/0131/peca2.png')" class="color-option">
+            <img src="./img/0636/0636.png" alt="" onclick="trocarImagem('peca2','img/0636/peca2.png')" class="color-option">
+            <img src="./img/0668/0668.png" alt="" onclick="trocarImagem('peca2','img/0668/peca2.png')" class="color-option">            
+            <img src="./img/0730/0730.png" alt="" onclick="trocarImagem('peca2','img/0730/peca2.png')" class="color-option">
+            <img src="./img/0757/0757.png" alt="" onclick="trocarImagem('peca2','img/0757/peca2.png')" class="color-option">
+            <img src="./img/0858/0858.png" alt="" onclick="trocarImagem('peca2','img/0858/peca2.png')" class="color-option">
+            <img src="./img/0885/0885.png" alt="" onclick="trocarImagem('peca2','img/0885/peca2.png')" class="color-option">
+            <img src="./img/0889/0889.png" alt="" onclick="trocarImagem('peca2','img/0889/peca2.png')" class="color-option">
+            <img src="./img/6137/6137.png" alt="" onclick="trocarImagem('peca2','img/6137/peca2.png')" class="color-option">
+            <img src="./img/8088/8088.png" alt="" onclick="trocarImagem('peca2','img/8088/peca2.png')" class="color-option">            
+          </div>
+
+        </div>
+
+        <div class="color-options2">
+          <h1 class="titulo-option" >Cor do Meio (Assento)</h1>
+          <div class="cores2">
+            <img src="./img/0040/0040.png" alt="" onclick="trocarImagem('peca3','img/0040/peca3.png')" class="color-option">
+            <img src="./img/0131/0131.png" alt="" onclick="trocarImagem('peca3','img/0131/peca3.png')" class="color-option">
+            <img src="./img/0636/0636.png" alt="" onclick="trocarImagem('peca3','img/0636/peca3.png')" class="color-option">
+            <img src="./img/0668/0668.png" alt="" onclick="trocarImagem('peca3','img/0668/peca3.png')" class="color-option">            
+            <img src="./img/0730/0730.png" alt="" onclick="trocarImagem('peca3','img/0730/peca3.png')" class="color-option">
+            <img src="./img/0757/0757.png" alt="" onclick="trocarImagem('peca3','img/0757/peca3.png')" class="color-option">
+            <img src="./img/0858/0858.png" alt="" onclick="trocarImagem('peca3','img/0858/peca3.png')" class="color-option">
+            <img src="./img/0885/0885.png" alt="" onclick="trocarImagem('peca3','img/0885/peca3.png')" class="color-option">
+            <img src="./img/0889/0889.png" alt="" onclick="trocarImagem('peca3','img/0889/peca3.png')" class="color-option">
+            <img src="./img/6137/6137.png" alt="" onclick="trocarImagem('peca3','img/6137/peca3.png')" class="color-option">
+            <img src="./img/8088/8088.png" alt="" onclick="trocarImagem('peca3','img/8088/peca3.png')" class="color-option">  
+          </div>
+
+
+        </div>
+        <div class="color-options2">
+          <h1 class="titulo-option" >Cor do Meio (Encosto)</h1>
+          <div class="cores2">
+            <img src="./img/0040/0040.png" alt="" onclick="trocarImagem('peca4','img/0040/peca4.png')" class="color-option">
+            <img src="./img/0131/0131.png" alt="" onclick="trocarImagem('peca4','img/0131/peca4.png')" class="color-option">
+            <img src="./img/0636/0636.png" alt="" onclick="trocarImagem('peca4','img/0636/peca4.png')" class="color-option">
+            <img src="./img/0668/0668.png" alt="" onclick="trocarImagem('peca4','img/0668/peca4.png')" class="color-option">            
+            <img src="./img/0730/0730.png" alt="" onclick="trocarImagem('peca4','img/0730/peca4.png')" class="color-option">
+            <img src="./img/0757/0757.png" alt="" onclick="trocarImagem('peca4','img/0757/peca4.png')" class="color-option">
+            <img src="./img/0858/0858.png" alt="" onclick="trocarImagem('peca4','img/0858/peca4.png')" class="color-option">
+            <img src="./img/0885/0885.png" alt="" onclick="trocarImagem('peca4','img/0885/peca4.png')" class="color-option">
+            <img src="./img/0889/0889.png" alt="" onclick="trocarImagem('peca4','img/0889/peca4.png')" class="color-option">
+            <img src="./img/6137/6137.png" alt="" onclick="trocarImagem('peca4','img/6137/peca4.png')" class="color-option">
+            <img src="./img/8088/8088.png" alt="" onclick="trocarImagem('peca4','img/8088/peca4.png')" class="color-option">  
+          </div>
+
+        </div>
+
+        <div class="color-options2">
+          <h1 class="titulo-option" >Cor do Encosto</h1>
+          <div class="cores2">
+            <img src="./img/0040/0040.png" alt="" onclick="trocarImagem('peca6','img/0040/peca6.png')" class="color-option">
+            <img src="./img/0131/0131.png" alt="" onclick="trocarImagem('peca6','img/0131/peca6.png')" class="color-option">
+            <img src="./img/0636/0636.png" alt="" onclick="trocarImagem('peca6','img/0636/peca6.png')" class="color-option">
+            <img src="./img/0668/0668.png" alt="" onclick="trocarImagem('peca6','img/0668/peca6.png')" class="color-option">            
+            <img src="./img/0730/0730.png" alt="" onclick="trocarImagem('peca6','img/0730/peca6.png')" class="color-option">
+            <img src="./img/0757/0757.png" alt="" onclick="trocarImagem('peca6','img/0757/peca6.png')" class="color-option">
+            <img src="./img/0858/0858.png" alt="" onclick="trocarImagem('peca6','img/0858/peca6.png')" class="color-option">
+            <img src="./img/0885/0885.png" alt="" onclick="trocarImagem('peca6','img/0885/peca6.png')" class="color-option">
+            <img src="./img/0889/0889.png" alt="" onclick="trocarImagem('peca6','img/0889/peca6.png')" class="color-option">
+            <img src="./img/6137/6137.png" alt="" onclick="trocarImagem('peca6','img/6137/peca6.png')" class="color-option">
+            <img src="./img/8088/8088.png" alt="" onclick="trocarImagem('peca6','img/8088/peca6.png')" class="color-option">  
+          </div>
+        </div>
+
+        <div class="color-options2">
+          <h1 class="titulo-option" >Cor da Junção</h1>
+          <div class="cores2">
+            <img src="./img/0040/0040.png" alt="" onclick="trocarImagem('peca5','img/0040/peca5.png')" class="color-option">
+            <img src="./img/0131/0131.png" alt="" onclick="trocarImagem('peca5','img/0131/peca5.png')" class="color-option">
+            <img src="./img/0636/0636.png" alt="" onclick="trocarImagem('peca5','img/0636/peca5.png')" class="color-option">
+            <img src="./img/0668/0668.png" alt="" onclick="trocarImagem('peca5','img/0668/peca5.png')" class="color-option">            
+            <img src="./img/0730/0730.png" alt="" onclick="trocarImagem('peca5','img/0730/peca5.png')" class="color-option">
+            <img src="./img/0757/0757.png" alt="" onclick="trocarImagem('peca5','img/0757/peca5.png')" class="color-option">
+            <img src="./img/0858/0858.png" alt="" onclick="trocarImagem('peca5','img/0858/peca5.png')" class="color-option">
+            <img src="./img/0885/0885.png" alt="" onclick="trocarImagem('peca5','img/0885/peca5.png')" class="color-option">
+            <img src="./img/0889/0889.png" alt="" onclick="trocarImagem('peca5','img/0889/peca5.png')" class="color-option">
+            <img src="./img/6137/6137.png" alt="" onclick="trocarImagem('peca5','img/6137/peca5.png')" class="color-option">
+            <img src="./img/8088/8088.png" alt="" onclick="trocarImagem('peca5','img/8088/peca5.png')" class="color-option">  
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
