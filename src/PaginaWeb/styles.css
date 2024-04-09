@@ -1,0 +1,121 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100%;
+}
+#chair-side {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: calc(100% - 600px);
+  background-color: white;
+}
+@media screen and (max-width: 600px) {
+  #chair-side {
+    position: fixed;
+    height: 50%;
+    overflow: hidden; 
+    z-index: 9999; /* Definindo a altura para 50% da altura da janela */
+  }
+  #menu-side {
+    order: 2; /* Define a ordem do menu para 2, fazendo com que ele apareça abaixo do chair-side */
+    width: 100%;
+    margin-top: 100px;
+    padding-bottom: 50px; /* Largura total para ocupar a largura da tela */
+  }
+   #chair-side {
+    width: 100%; /* Ocupa a largura total da tela */
+  }
+  .imagens {
+  }
+}
+
+#menu-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  height: 100%;
+  background-color: rgb(236, 236, 236);
+  position: relative;
+  overflow: auto;
+}
+
+
+.titulo-sub * {
+  margin:0
+}
+
+.titulo-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+
+.titulo {
+  font-size: 50px;
+}
+
+.sub {
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.color-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.cores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 50px 0 50px
+}
+
+.color-option {
+  height: 30px;
+  width: 30px;
+  margin: 5px 5px 5px 5px;
+  border-radius: 100px;
+}
+
+
+.color-option:hover {
+  margin: 4px 4px 4px 4px;
+  border: 1px solid black;
+}
+
+.chair-image {
+  position: absolute;
+  width: 70%;
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Adicionado */
+  width: 100%; /* Adicionado */
+
+}
+
+.titulo-option {
+  margin: 0 30px 0 30px
+}

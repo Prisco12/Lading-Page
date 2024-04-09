@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Div as PNG</title>
+    <!-- 
+         Importe o DOMtoImage 
+         É uma biblioteca JavaScript que permite capturar e converter elementos DOM (Document Object Model) em imagens.
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        /* Estilos para a div que você deseja salvar */
+        .downloadable-div {
+            width: 300px;
+            height: 350px;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="downloadable-div">
+        <!-- Conteúdo da div que você deseja salvar -->
+        <h1>Minha Foto</h1>
+        <img src="https://picsum.photos/200" alt="foto" width="200" height="200">
+        <p>Confira a super foto.</p>
+    </div>
+    <button id="download-button">Baixar como PNG</button>
+
+    <script>
+        // Seletor para a div que você deseja salvar
+        const divToDownload = document.querySelector('.downloadable-div');
+
+        // Seletor para o botão de download
+        const downloadButton = document.getElementById('download-button');
+
+        // Função para criar a imagem e iniciar o download
+        function downloadDivAsImage() {
+            // Crie um elemento de imagem
+            const image = document.createElement('img');
+
+            // Converta a div em uma imagem usando o DOMtoImage
+            domtoimage.toPng(divToDownload)
+                .then(function (dataUrl) {
+                    // Defina o atributo 'src' da imagem
+                    image.src = dataUrl;
+
+                    // Crie um link para download
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = 'superimagem.png';
+
+                    // Anexe a imagem ao link
+                    link.appendChild(image);
+
+                    // Simule um clique no link para iniciar o download
+                    link.click();
+                })
+                .catch(function (error) {
+                    console.error('Erro ao converter a div em imagem:', error);
+                });
+        }
+
+        // Adicione um ouvinte de evento ao botão de download
+        downloadButton.addEventListener('click', downloadDivAsImage);
+    </script>
+</body>
+</html>
